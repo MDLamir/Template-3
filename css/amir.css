@@ -1535,13 +1535,14 @@ header .container .main-nav>li:last-child .menu .links li a i {
     margin: 10px 0px;
 }
 
-.card span:not(.number) {
+.content .card span:not(.number) {
     font-size: 20px;
     font-weight: 600;
     text-transform: capitalize;
     color: var(--main-color);
     font-style: italic;
 }
+
 /* end stats */
 /* start discount */
 .discount {
@@ -1549,13 +1550,13 @@ header .container .main-nav>li:last-child .menu .links li a i {
     text-align: center;
 }
 
-@media (max-width: 991px)  {
+@media (max-width: 991px) {
     .discount {
         flex-direction: column;
     }
 }
 
-.discount > div {
+.discount>div {
     flex-basis: 50%;
 }
 
@@ -1576,7 +1577,7 @@ header .container .main-nav>li:last-child .menu .links li a i {
     top: 0;
 }
 
-.discount .info > *{
+.discount .info>* {
     position: relative;
 }
 
@@ -1610,7 +1611,7 @@ header .container .main-nav>li:last-child .menu .links li a i {
 .discount .discount-form h2 {
     font-size: 40px;
     margin: 30px 0px;
-} 
+}
 
 .discount .discount-form form input {
     display: block;
@@ -1653,6 +1654,7 @@ header .container .main-nav>li:last-child .menu .links li a i {
     font-size: 18px;
     border: none;
 }
+
 /* end discount */
 /* start footer */
 footer {
@@ -1661,9 +1663,9 @@ footer {
     padding-top: 80px;
 }
 
-footer .container { 
+footer .container {
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 40px;
 }
 
@@ -1706,7 +1708,7 @@ footer .container img {
     color: #d9d9d9;
 }
 
-footer .container .links li a{
+footer .container .links li a {
     display: block;
     padding: 15px 0px;
     border-bottom: 1px solid #444;
@@ -1752,7 +1754,7 @@ footer .container .links li a:hover {
 
 .container .info ul li:nth-child(1) a:hover {
     background-color: #1877f2;
-} 
+}
 
 .container .info ul li:nth-child(2) a:hover {
     background-color: #1da1f2;
@@ -1780,7 +1782,7 @@ footer .container .links li a:hover {
     color: white;
 }
 
-footer > p {
+footer>p {
     padding: 20px 0;
     text-align: center;
     border-top: 1px solid #444;
@@ -1792,4 +1794,5 @@ footer > p {
         text-align: center;
     }
 }
+
 /* end footer */
