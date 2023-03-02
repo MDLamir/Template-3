@@ -696,23 +696,13 @@ header .container .main-nav>li:last-child .menu .links li a i {
     border-radius: 5px;
 }
 
-.test .container .card::before {
-    content: "";
-    position: absolute;
-    height: 100px;
-    width: 100px;
-    border-radius: 50%;
-    background-color: #ececec;
-    right: -17px;
-    top: -65px;
-}
-
 .test .container img {
     width: 80px;
     border-radius: 50%;
     position: absolute;
     right: -6px;
-    top: -55px;
+    top: -40px;
+    border: 10px solid #ececec;
 }
 
 .test .container .card .title {
@@ -1256,13 +1246,7 @@ header .container .main-nav>li:last-child .menu .links li a i {
     padding: 20px 0px;
     position: relative;
     box-shadow: 0 10px 10px #ddd;
-}
-
-.pricing .container .box:nth-of-type(2) {
-    transform: translateY(-15px);
-}
-
-.pricing .container .box *:not(::before, ::after) {
+    position: relative;
     z-index: 1;
 }
 
@@ -1273,9 +1257,36 @@ header .container .main-nav>li:last-child .menu .links li a i {
     top: 0;
     height: 50%;
     width: 0%;
-    background-color: #eee;
+    background-color: #f6f6f6;
     z-index: -1;
     transition: .3s;
+}
+
+.pricing .container .box::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    height: 50%;
+    width: 0%;
+    background-color: #f6f6f6;
+    z-index: -1;
+    transition: .3s;
+}
+
+.pricing .container .box:hover::before,
+.pricing .container .box:hover::after {
+    width: 100%;
+}
+
+.pricing .container .box:nth-of-type(2) {
+    transform: translateY(-15px);
+}
+
+@media (max-width: 991px) {
+    .pricing .container .box:nth-of-type(2) {
+        transform: translateY(0);
+    }
 }
 
 .pricing .container .box img {
@@ -1344,22 +1355,14 @@ header .container .main-nav>li:last-child .menu .links li a i {
 .pricing .container .box:nth-child(2) span:last-of-type {
     transform: rotate(90deg);
     position: absolute;
-    top: 50px;
-    right: 0px;
+    top: 64px;
+    right: -40px;
     color: white;
     font-size: 18px;
     font-weight: bold;
-}
-
-.pricing .container .box:nth-child(2) span:last-of-type::before {
-    content: "";
-    height: 40px;
-    width: calc(100% + 30px);
-    position: absolute;
     background-color: var(--main-color);
-    top: -10px;
-    right: -21px;
-    z-index: -1;
+    padding: 10px;
+    width: 170px;
 }
 
 .pricing .container .box:nth-child(2) span:last-of-type::after {
@@ -1369,8 +1372,8 @@ header .container .main-nav>li:last-child .menu .links li a i {
     border-color: transparent white transparent transparent;
     height: 0;
     width: 0;
-    top: -13px;
-    right: -26px;
+    top: -2px;
+    right: -1px;
 }
 
 /* end pricing */
