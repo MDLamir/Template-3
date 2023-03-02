@@ -1353,27 +1353,27 @@ header .container .main-nav>li:last-child .menu .links li a i {
 }
 
 .pricing .container .box:nth-child(2) span:last-of-type {
-    transform: rotate(90deg);
     position: absolute;
-    top: 64px;
-    right: -40px;
+    writing-mode: vertical-rl;
+    top: 0px;
+    right: 20px;
     color: white;
     font-size: 18px;
     font-weight: bold;
     background-color: var(--main-color);
-    padding: 10px;
-    width: 170px;
+    padding: 10px 10px 30px;
+    width: 40px;
 }
 
 .pricing .container .box:nth-child(2) span:last-of-type::after {
     content: "";
     position: absolute;
-    border: 23px solid;
-    border-color: transparent white transparent transparent;
+    border: 20px solid;
+    border-color: transparent transparent white;
     height: 0;
     width: 0;
-    top: -2px;
-    right: -1px;
+    right: 0;
+    bottom: -1px;
 }
 
 /* end pricing */
